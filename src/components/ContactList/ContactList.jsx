@@ -1,10 +1,16 @@
 import { getFilterValue } from '../../redux/filterSlice';
 import { getContacts } from '../../redux/contactsSlice';
+
 import { useSelector } from 'react-redux';
 import ContactItem from 'components/ContactItem/ContactItem';
 import { AddList } from './ContactList.styled';
 
+
 const ContactList = () => {
+
+
+
+
   const contacts = useSelector(getContacts);
   const filter = useSelector(getFilterValue);
   // if (!flContacts || flContacts.length === 0) {
