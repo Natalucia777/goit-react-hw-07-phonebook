@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from './services';
+import { fetchContacts, addContact, deleteContact } from './operations';
 
 export const handlePanding = state => {
   state.isLoading = true;
@@ -29,21 +29,21 @@ export const contactSlice = createSlice({
   //   },
   // });
   extraReducers: {
-    [fetchContacts.pending]: hanlePanding,
+    [fetchContacts.pending]: handlePanding,
     [fetchContacts.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;
     },
     [fetchContacts.rejected]: handleRejected,
-    [addContact.pending]: hanlePanding,
+    [addContact.pending]: handlePanding,
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items.push(action.payload);
     },
     [addContact.rejected]: handleRejected,
-    [deleteContact.pending]: hanlePanding,
+    [deleteContact.pending]: handlePanding,
     [deleteContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;

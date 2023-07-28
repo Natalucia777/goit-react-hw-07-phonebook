@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 //import { getContacts, addContact } from '../../redux/contactsSlice';
 import { selectContactsItems } from '../../redux/contactsSlice';
-import { addContact } from 'redux/services';
+import { addContact } from 'redux/operations';
 import { StForm } from './ContactForm.styled';
 import { StLabel } from './ContactForm.styled';
 import { FieldName } from './ContactForm.styled';

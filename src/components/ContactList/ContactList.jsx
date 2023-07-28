@@ -1,17 +1,13 @@
-import { getFilterValue } from '../../redux/filterSlice';
-import { getContacts } from '../../redux/contactsSlice';
-
 import { useSelector } from 'react-redux';
+import { getFilterValue } from '../../redux/filterSlice';
+// import { getContacts } from '../../redux/contactsSlice';
+import { selectContactsItems } from '../../redux/contactsSlice';
 import ContactItem from 'components/ContactItem/ContactItem';
 import { AddList } from './ContactList.styled';
 
-
 const ContactList = () => {
-
-
-
-
-  const contacts = useSelector(getContacts);
+  // const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContactsItems);
   const filter = useSelector(getFilterValue);
   // if (!flContacts || flContacts.length === 0) {
   //   return <div>No such contact!</div>;

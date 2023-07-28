@@ -1,7 +1,7 @@
 //import { deleteContact } from '../../redux/contactsSlice';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/services';
-import { fetchContacts } from '../../redux/services';
+import { deleteContact } from '../../redux/operations';
+import { fetchContacts } from '../../redux/operations';
 import { ListItem } from './ContactItem.styled';
 import { FormButton } from 'components/ContactForm/ContactForm.styled';
 import PropTypes from 'prop-types';
